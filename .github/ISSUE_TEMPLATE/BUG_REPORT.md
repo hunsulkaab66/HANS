@@ -3,7 +3,8 @@ name: Bug Report
 about: Report a crash, incorrect behavior, or unexpected result in HANS
 title: "[Bug] "
 labels: bug
-assignees: ""
+assignees: ''
+
 ---
 
 ## Summary

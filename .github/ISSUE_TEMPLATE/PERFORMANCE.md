@@ -2,8 +2,9 @@
 name: Performance Regression
 about: Report performance regressions or unexpected benchmark results
 title: "[Performance] "
-labels: performance
-assignees: ""
+labels: ''
+assignees: ''
+
 ---
 
 ## Summary

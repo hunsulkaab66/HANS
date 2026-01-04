@@ -3,7 +3,8 @@ name: Question
 about: Ask a question about HANS design, usage, or roadmap
 title: "[Question] "
 labels: question
-assignees: ""
+assignees: ''
+
 ---
 
 ## Question

@@ -2,8 +2,9 @@
 name: Design Discussion
 about: Propose or discuss architectural or policy-level changes
 title: "[Design] "
-labels: design
-assignees: ""
+labels: ''
+assignees: ''
+
 ---
 
 ## Motivation
