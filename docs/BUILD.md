@@ -99,12 +99,6 @@ hans/
 │       ├── CachePolicy.h
 │       └── CachePolicy.cpp
 │
-├── shell/
-│   ├── src/
-│   │   ├── main/
-│   │   └── test/
-│   └── pom.xml
-│
 ├── core/
 │   ├── CacheManager.cpp
 │   ├── CacheManager.h
